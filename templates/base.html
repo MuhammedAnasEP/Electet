@@ -1,0 +1,114 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Electet</title>
+    <meta name="keywords" content="Electet electet">
+    <meta name="author" content="MuhammedAnasEP">
+    
+    <link href="https://fonts.googleapis.com/css?family=Montserrat:400,500,700" rel="stylesheet">
+
+    <link type="text/css" rel="stylesheet" href="{% static 'css/bootstrap.min.css' %}"/>
+
+    <link type="text/css" rel="stylesheet" href="{% static 'css/slick.css' %}"/>
+    <link type="text/css" rel="stylesheet" href="{% static 'css/slick-theme.css' %}"/>
+
+    <link type="text/css" rel="stylesheet" href="{% static 'css/nouislider.min.css' %}"/>
+
+    <link rel="stylesheet" href="{% static 'css/font-awesome.min.css' %}"/>
+
+    <link type="text/css" rel="stylesheet" href="{% static 'css/style.css' %}"/>
+</head>
+
+<body>
+    <header>
+       
+        <div id="header">
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-3">
+                        <div class="header-logo">
+                            <h3 style="color: white; margin-top: 20px;"><a href="/">E L E C T E T</a></h3>
+                        </div>
+                    </div>
+                    <div class="col-md-6">
+                        <div class="header-search">
+                            <!-- <form>
+                                <span  style="padding:11px;border-radius: 50px 0px 0px 50px;background-color: white; border: none;"></span>
+                                <input class="input" placeholder="Search here">
+                                <button class="search-btn">Search</button>
+                            </form> -->
+                        </div>
+                    </div>
+                    <div class="col-md-3 clearfix">
+                        <div class="header-ctn">
+                            <div>
+                                <a href="signout">
+                                    <i class="fa fa-sign-out"></i>
+                                    <span>Logout</span>
+                                </a>
+                            </div>
+                            <div>
+                                <a href="cart">
+                                    <i class="fa fa-shopping-cart"></i>
+                                    <span>Your Cart</span>
+                                    <div class="qty">{{cart_count}}</div>
+                                </a>                                
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </header>
+    <nav id="navigation">
+        <div class="container">
+            <div id="responsive-nav">
+                <ul class="main-nav nav navbar-nav">
+                    <li class="active"><a href="/">Home</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+    {% block content %}
+    {% endblock %}
+    <footer>
+
+        <!-- bottom footer -->
+        <div id="bottom-footer" class="section">
+            <div class="container">
+                <!-- row -->
+                <div class="row">
+                    <div class="col-md-12 text-center">
+                        <ul class="footer-payments">
+                            <li><a href="#"><i class="fa fa-cc-visa"></i></a></li>
+                            <li><a href="#"><i class="fa fa-credit-card"></i></a></li>
+                            <li><a href="#"><i class="fa fa-cc-paypal"></i></a></li>
+                            <li><a href="#"><i class="fa fa-cc-mastercard"></i></a></li>
+                            <li><a href="#"><i class="fa fa-cc-discover"></i></a></li>
+                            <li><a href="#"><i class="fa fa-cc-amex"></i></a></li>
+                        </ul>
+                        <span class="copyright">
+                             <a href="/">Electet</a>
+                        </span>
+                    </div>
+                </div>
+                    <!-- /row -->
+            </div>
+            <!-- /container -->
+        </div>
+        <!-- /bottom footer -->
+    </footer>
+    <!-- Home -->
+    <script src="{% static 'js/jquery.min.js' %}"></script>
+    <script src="{% static 'js/bootstrap.min.js' %}"></script>
+    <script src="{% static 'js/slick.min.js' %}"></script>
+    <script src="{% static 'js/nouislider.min.js' %}"></script>
+    <script src="{% static 'js/jquery.zoom.min.js' %}"></script>
+    <script src="{% static 'js/main.js' %}"></script>
+    {% block js %}
+    {% endblock %}
+</body>
+</html>
